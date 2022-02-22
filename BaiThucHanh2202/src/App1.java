@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class App9 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1,num2, reversed = 0;
+        System.out.println("\nNhập số nguyên dương : ");
+        num1 = sc.nextInt();
+        num2 = num1;
+        while(num1 != 0) {
+            int digit = num1 % 10;
+            reversed = reversed * 10 + digit;
+            num1 /= 10;
+        }
+        System.out.printf("Số %d sau khi đảo ngược là: %d", num2, reversed);
+    }
+}
+import java.util.Scanner;
+
+public class App1 {
+
+    public static void main(String[] args)  {
+        Scanner sc =new Scanner(System.in);
+        int a, b;
+        do {
+            System.out.println("Moi nhap so nguyen a: ");
+            a = sc.nextInt();
+        } while (!(a>0));
+        do {
+            System.out.println("Moi nhap so nguyen b: ");
+            b = sc.nextInt();
+        } while (!(b>0));
+        for(int i=Math.min(a, b); i>=1; i--){
+            if(a%i==0 && b%i==0){
+                System.out.format("Uoc chung lon nhat cua %d và %d la: %d",a,b,i);
+                break;
+            }
+        }
+    }
+}
